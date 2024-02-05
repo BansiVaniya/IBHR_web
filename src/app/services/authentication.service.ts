@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import {configuration} from '../../configuration';
+import {configuration} from '../configuration';
 import { Observable, Subject } from 'rxjs';
 import { EncryptionService } from './encryption.service';
 
