@@ -24,11 +24,17 @@
                               </p>
                               <div class="form-part">
                                 <form>
-                                  <div class="form-group">
-
+                                            <div class="form-group">
                                           <div class="input-icon">
-                                              <input id="email" type="text" placeholder="Email Address/Employee ID" class="form-control red" name="email" value="" />
-                                              <img class="icon-first" src="../../../../../assets/icons/email.svg" />
+                                            <mat-form-field appearance="outline">
+                                                <input
+                                                matInput
+                                                placeholder="Event Name"
+                                                formControlName="email"
+                                                autocomplete="off"
+                                              />
+                                            </mat-form-field>
+                                            <!-- <img class="icon-first" src="../../../../../assets/icons/email.svg" /> -->
                                           </div>
                                           <p class="error">
                                               <span></span>
