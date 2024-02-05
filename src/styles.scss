@@ -1,0 +1,14 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --theme-clr-green: #4CA456;
+  --navy-blue: #24024F;
+  --blue: #0075ff !important;
+}
+
+*{text-transform: uppercase !important;}
+body { margin: 0; padding: 0; background: #F2F7FF;}
+body::-webkit-scrollbar {width: 12px;}
+body::-webkit-scrollbar-track {background: #ffffff;}
+body::-webkit-scrollbar-thumb { background-color: rgb(36 2 79 / 64%); border-radius: 10px; border: 3px solid #ffffff;}
+img { max-width: 100%; height: auto;}

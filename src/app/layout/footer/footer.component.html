@@ -1,0 +1,101 @@
+<!-- Modal -->
+<div class="notification-modal">
+  <div class="modal right fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel2">Notification</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="markAll">
+                      <button type="button" class="btn" id="allnotificationUnread">Mark all as read</button>
+                  </div>
+                  <div class="notification-details notificationUnread" data-id="" style="cursor:pointer;">
+                      <div class="row align-items-center">
+                          <div class="col-6">
+                              <h4>YASH NASIT</h4>
+                          </div>
+                          <div class="col-6 text-right">
+                              <h6>23 Jan, 2024</h6>
+                          </div>
+                      </div>
+                      <p>YASH NASIT is transferred to Carrollton from Eldorado</p>
+                  </div>
+                  <div class="notification-details">
+                      <div class="row align-items-center">
+                          <div class="col-6">
+                              <h4>YASH NASIT</h4>
+                          </div>
+                          <div class="col-6 text-right">
+                              <h6>23 Jan, 2024</h6>
+                          </div>
+                      </div>
+                      <p>YASH NASIT is transferred to Carrollton from Eldorado</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<!-- <div class="notification-modal">
+  <div class="modal right fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel2">Notification</h4>
+              </div>
+              @auth
+              @php  $notifications = getNotification(getAuthUserId()); @endphp
+              <div class="modal-body">
+                  @if(count($notifications) > 0)
+                  <div class="markAll">
+                      <button type="button" class="btn" id="allnotificationUnread">Mark all as read</button>
+                  </div>
+                      @foreach($notifications as $data)
+                          @if($data->is_read == 0)
+                              @if($data->notification_title && $data->notification_desc)
+                              <div class="notification-details notificationUnread" data-id="{{$data->notificationId}}" style="cursor:pointer;">
+                                  <div class="row align-items-center">
+                                      <div class="col-6">
+                                          <h4>{{$data->notification_title}}</h4>
+                                      </div>
+                                      <div class="col-6 text-right">
+                                          <h6>{{date('d M, Y' , strtotime($data->created_at)) ?? ''}}</h6>
+                                      </div>
+                                  </div>
+                                  <p>{!! $data->notification_desc !!}</p>
+                              </div>
+                              @endif
+                          @else
+                              @if($data->notification_title && $data->notification_desc)
+                              <div class="notification-details">
+                                  <div class="row align-items-center">
+                                      <div class="col-6">
+                                          <h4>{{$data->notification_title}}</h4>
+                                      </div>
+                                      <div class="col-6 text-right">
+                                          <h6>{{date('d M, Y' , strtotime($data->created_at)) ?? ''}}</h6>
+                                      </div>
+                                  </div>
+                                  <p>{!! $data->notification_desc !!}</p>
+                              </div>
+                              @endif
+                          @endif
+                      @endforeach
+                  @else
+                      <div class="h-100 d-flex align-items-center justify-content-center">
+                          <h6 class="text-center py-3">No Notification Available.</h6>
+                      </div>
+                  @endif
+              </div>
+              @endauth
+          </div>
+      </div>
+  </div>
+</div> -->

@@ -1,0 +1,104 @@
+.header {background: var(--white); position: sticky; top: 0; z-index: 99;
+  .navbar {box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      .navbar-brand {color: var(--black); font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: 700; margin: 0;}
+      #toggle-hero { position: relative; width: 30px; height: 26px;
+          input { position: absolute; top: -3px; left: -3px; width: 100%; height: 100%; z-index: 1; opacity: 0; cursor: pointer;}
+          input:checked + span {background: transparent;}
+          input:checked + span:after {transform: rotate(45deg) translate(-1px, -8px);}
+          input:checked + span:before {transform: rotate(-45deg) translate(-4px, 12px);}
+          span { position: absolute; width: 100%; height: 3px; background: var(--black); margin-top: 10px; right: 0;}
+          span:before, span:after { content: ""; position: absolute; width: 100%; height: 3px; background: var(--black); top: -9px; transition: 0.3s; right: 0;}
+          span:after {top: 9px;}
+      }
+      .navbar-collapse { padding-left: 25px;
+          .navbar-nav {
+              .nav-item {padding-left: 15px; padding-right: 15px; border-right: 1px solid rgba(36, 2, 79, 0.3); color: rgba(0, 0, 0, 0.5); transition: all 0.7s ease;
+                  .nav-link {color: var(--black); font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0; position: relative; transition: all 0.7s ease;
+                      img {position: absolute; top: 0; bottom: 0; margin: auto; left: 5px; transition: all 0.7s ease;}
+                      img.green {display: none;}
+                      img.black {display: block;}
+
+                  }
+                  .nav-link.dashboard {padding-left: 25px;}
+                  .nav-link.hr {padding-left: 31px;}
+                  .nav-link.store {padding-left: 28px;}
+                  .nav-link.manage {padding-left: 30px;}
+                  .nav-link.active {color: var(--theme-clr-green); border: 1px solid var(--theme-clr-green); border-radius: 4px;
+                      img.black {display: none;}
+                      img.green {display: block;}
+                  }
+              }
+              .nav-item:last-child {border-right: none;}
+          }
+      }
+  }
+}
+
+
+
+
+// .navbar-nav .nav-item:last-child {border-right: none;}
+// .navbar-nav .nav-item .nav-link {color: var(--black); font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0; position: relative; transition: all 0.7s ease;}
+// .navbar-nav .nav-item .nav-link.dashboard {padding-left: 25px;}
+// .navbar-nav .nav-item .nav-link.hr {padding-left: 31px;}
+// .navbar-nav .nav-item .nav-link.store {padding-left: 28px;}
+// .navbar-nav .nav-item .nav-link.manage {padding-left: 30px;}
+// .navbar-nav .nav-item .nav-link.active {color: var(--theme-clr-green); border: 1px solid var(--theme-clr-green); border-radius: 4px;}
+// .navbar-nav .nav-item .nav-link img {position: absolute; top: 0; bottom: 0; margin: auto; left: 5px; transition: all 0.7s ease;}
+// .navbar-nav .nav-item .nav-link img.green {display: none;}
+// .navbar-nav .nav-item .nav-link img.black {display: block;}
+// .navbar-nav .nav-item .nav-link.active img.black {display: none;}
+// .navbar-nav .nav-item .nav-link.active img.green {display: block;}
+.header .navbar .navbar-nav {margin-right: auto;}
+.navbar-collapse .bdayCake a {border-radius: 6px;  border: 1px solid var(--black); padding: 6px 10px 11px; margin-right: 15px; background: #F6F8FB; position: relative;}
+.header .navbar .navbar-collapse .bdayCake a .cake {width: 29px;}
+.header .navbar .navbar-collapse .bdayCake a span {position: absolute; top: -6px; right: -10px;}
+.header .navbar .navbar-collapse .notification button {box-shadow: none; outline: none; margin: 0; background: #F6F8FB; border-radius: 6px; position: relative; margin-right: 20px; border: 1px solid var(--black);}
+.header .navbar .navbar-collapse .notification button span {position: absolute; top: -6px;}
+.header .navbar .navbar-collapse .dropdown { position: relative; left: 0; padding-left: 45px; /*margin-right: 7px;*/}
+.header .navbar .navbar-collapse .dropdown .btn {color: var(--black); font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: 700; margin: 0; background: none; border: none; box-shadow: none; padding-top: 0; padding-bottom: 0;}
+.header .navbar .navbar-collapse .dropdown-menu.show .dropdown-item {color: var(--black); font-family: 'Roboto', sans-serif; font-size: 12px; font-weight: 600; padding-left: 35px; position: relative;}
+.header .navbar .navbar-collapse .dropdown-menu.show .dropdown-item:focus {background: var(--white); color: var(--black);}
+.header .navbar .navbar-collapse .dropdown-menu.show .dropdown-item img {position: absolute; top: 0; bottom: 0; margin: auto;}
+.header .navbar .navbar-collapse .dropdown-menu.show .dropdown-item .profileIcons {left: 13px;}
+.header .navbar .navbar-collapse .dropdown-menu.show .dropdown-item .logoutIcons {left: 8px;}
+.header .navbar .navbar-collapse .dropdown .btn .profile-img {position: absolute; top: 0; left: 0;}
+.header .navbar .navbar-collapse .dropdown .btn .profile-img img {width: 44px; height: 44px; border-radius: 4px;}
+.header .navbar .navbar-collapse .dropdown p {color: var(--black); font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: 400; margin: 0; padding-left: 13px;}
+
+
+// NOTIFICATIONS
+.notification-modal .modal.right .modal-dialog { position: fixed; margin: auto; width: 450px; height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+      -ms-transform: translate3d(0%, 0, 0);
+       -o-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+}
+.notification-modal .modal .modal-content {border-radius: 0 !important;}
+.notification-modal .modal.right .modal-content { height: 100%; overflow-y: auto;}
+.notification-modal .modal.right .modal-content::-webkit-scrollbar {width: 11px; height: 11px;}
+.notification-modal .modal.right .modal-content::-webkit-scrollbar-track {background: #fff; margin-bottom: 10px;}
+.notification-modal .modal.right .modal-content::-webkit-scrollbar-thumb { background-color: rgb(6, 6, 6, 0.3); border-radius: 10px; border: 3px solid #ffffff;}
+.notification-modal .modal.right .modal-header {text-align: inherit;}
+.notification-modal .modal.right .modal-header h4 {color: var(--black); font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 700; margin: 0;}
+.notification-modal .modal.right .modal-body { padding: 15px 25px 80px; text-align: inherit !important; margin: 0;}
+.notification-modal .modal.right .modal-body .markAll {text-align: right;}
+.notification-modal .modal.right .modal-body .markAll button {color: var(--theme-clr-green); font-size: 14px; font-weight: 700; margin: 0; background: #dbeddd; box-shadow: none; outline: none; border: 1px solid var(--theme-clr-green);}
+.notification-modal .modal.right .modal-body .notification-details {border-bottom: 1px solid rgba(34, 51, 84, 0.4); margin-top: 13px; padding: 15px 10px 0 10px;}
+.notification-modal .modal.right .modal-body .notification-details.notificationUnread {background: rgb(217 217 217 / 50%);}
+.notification-modal .modal.right .modal-body .notification-details h4 {color: var(--black); font-size: 15px; font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0; margin-bottom: 5px;}
+.notification-modal .modal.right .modal-body .notification-details h6 {color: var(--black); font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0; margin-bottom: 5px;}
+.notification-modal .modal.right .modal-body .notification-details p {color: rgba(0, 0, 0, 0.5); font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 400; margin: 0; margin-bottom: 10px;}
+.notification-modal .modal.right .modal-body .notification-details p.approve {color: #3BB900; font-weight: 500;}
+.notification-modal .modal.right .modal-body .notification-details p.notApprove {color: #FF1A43; font-weight: 500;}
+.notification-modal .modal.right.fade .modal-dialog {right: -320px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+     -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+          transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.notification-modal .modal.right.fade.show .modal-dialog {right: 0;}
+/* ----- MODAL STYLE ----- */
+.notification-modal .modal-content { border-radius: 0; border: none;}
+.notification-modal .modal-header { border-bottom-color: #EEEEEE; background-color: #FAFAFA;}

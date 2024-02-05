@@ -1,0 +1,35 @@
+.notification-modal .modal.right .modal-dialog { position: fixed; margin: auto; width: 450px; height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+      -ms-transform: translate3d(0%, 0, 0);
+       -o-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+}
+.notification-modal .modal .modal-content {border-radius: 0 !important;}
+.notification-modal .modal.right .modal-content { height: 100%; overflow-y: auto;}
+.notification-modal .modal.right .modal-content::-webkit-scrollbar {width: 11px; height: 11px;}
+.notification-modal .modal.right .modal-content::-webkit-scrollbar-track {background: #fff; margin-bottom: 10px;}
+.notification-modal .modal.right .modal-content::-webkit-scrollbar-thumb { background-color: rgb(6, 6, 6, 0.3); border-radius: 10px; border: 3px solid #ffffff;}
+.notification-modal .modal.right .modal-header {text-align: inherit;}
+.notification-modal .modal.right .modal-header h4 {color: var(--black); font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 700; margin: 0;}
+.notification-modal .modal.right .modal-body { padding: 15px 25px 80px; text-align: inherit !important; margin: 0;}
+.notification-modal .modal.right .modal-body .markAll {text-align: right;}
+.notification-modal .modal.right .modal-body .markAll button {color: var(--theme-clr-green); font-size: 14px; font-weight: 700; margin: 0; background: #dbeddd; box-shadow: none; outline: none; border: 1px solid var(--theme-clr-green);}
+.notification-modal .modal.right .modal-body .notification-details {border-bottom: 1px solid rgba(34, 51, 84, 0.4); margin-top: 13px; padding: 15px 10px 0 10px;}
+/* .notification-modal .modal.right .modal-body .notification-details.notificationUnread {background: rgb(163 161 161 / 37%);} */
+.notification-modal .modal.right .modal-body .notification-details.notificationUnread {background: rgb(217 217 217 / 50%);}
+.notification-modal .modal.right .modal-body .notification-details h4 {color: var(--black); font-size: 15px; font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0; margin-bottom: 5px;}
+.notification-modal .modal.right .modal-body .notification-details h6 {color: var(--black); font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0; margin-bottom: 5px;}
+.notification-modal .modal.right .modal-body .notification-details p {color: rgba(0, 0, 0, 0.5); font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 400; margin: 0; margin-bottom: 10px;}
+.notification-modal .modal.right .modal-body .notification-details p.approve {color: #3BB900; font-weight: 500;}
+.notification-modal .modal.right .modal-body .notification-details p.notApprove {color: #FF1A43; font-weight: 500;}
+.notification-modal .modal.right.fade .modal-dialog {right: -320px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+     -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+          transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.notification-modal .modal.right.fade.show .modal-dialog {right: 0;}
+/* ----- MODAL STYLE ----- */
+.notification-modal .modal-content { border-radius: 0; border: none;}
+.notification-modal .modal-header { border-bottom-color: #EEEEEE; background-color: #FAFAFA;}
