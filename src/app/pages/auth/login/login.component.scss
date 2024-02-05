@@ -14,8 +14,8 @@
                     .form-part { padding: 25px 0 5px;
                         .mat-mdc-form-field {width: 100%;
                             mat-label {padding-left: 10px !important;}
-                        }                        
-                        .mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input {padding-left: 10px;}                            
+                        }
+                        .mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input {padding-left: 10px;}
                         .submit-btn { box-shadow: none; margin-top: 10px;
                             // .disable-btn {font-family: 'Roboto', sans-serif; width: 100%; background: rgb(36, 2, 79, 0.5); color: var(--white); font-weight: 700; padding: 14px; border-radius: 4px; font-size: 19px; border: 0; outline: none;}
                             .login-submit { font-family: 'Roboto', sans-serif; width: 100%; background: var(--theme-clr-green); color: var(--white); font-weight: 700; padding: 14px; border-radius: 4px; font-size: 19px; border: 0; outline: none;}
