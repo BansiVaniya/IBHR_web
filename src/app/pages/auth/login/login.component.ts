@@ -10,7 +10,7 @@ import { EMAIL_PATTERN } from '../../../helpers/emailValidation';
 export class LoginComponent {
   loginForm : FormGroup;
   loginSubmitted:boolean=false;
-
+  hide = true;
 
   //request var
   loginRequest:any={};

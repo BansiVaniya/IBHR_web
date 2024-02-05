@@ -1,79 +1,51 @@
 <div class="login-flow-main">
-  <header>
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12">
-                  <div class="logo-part">
-                      <img src="../../../../../assets/icons/indiabazar_logo.svg" alt="">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </header>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo-part">
+                        <img src="../../../../../assets/icons/indiabazar_logo.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <section class="login-part">
-      <div class="form-data login">
-          <div class="container-md">
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="card">
-                          <div class="login-data">
-                              <h4>Login</h4>
-                              <p>
-                                  Please enter your email/Employee ID and password to login
-                              </p>
-                              <div class="form-part">
-                                <form [formGroup]="loginForm">
-                                            <div class="form-group">
-                                          <div class="input-icon">
-                                            <mat-form-field appearance="outline">
-                                                <input
-                                                matInput
-                                                placeholder="Event Name"
-                                                formControlName="email"
-                                                autocomplete="off"
-                                              />
-                                            </mat-form-field>
-                                            <!-- <img class="icon-first" src="../../../../../assets/icons/email.svg" /> -->
-                                          </div>
-                                          <p class="error">
-                                              <span></span>
-                                          </p>
-                                          <p class="error">
-                                              <span></span>
-                                          </p>
-                                      </div>
-
-                                      <div class="form-group">
-                                          <div class="input-icon with-last">
-                                              <input id="password" type="password" placeholder="Password" class="form-control red" name="password" />
-                                              <img class="icon-first" src="../../../../../assets/icons/password.svg" />
-                                              <img class="icon-last eye" onclick="" src="../../../../../assets/icons/eye.svg" />
-                                          </div>
-                                          <p class="error">
-                                              <span></span>
-                                          </p>
-                                      </div>
-                                      <div class="form-group">
-
-                                          <div class="row">
-                                              <div class="col-sm-12 text-right">
-                                                  <a class="forgot-text" href="">
-                                                      Forgot password?
-                                                  </a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="submit-btn">
-                                          <button class="login-submit">LOGIN</button>
-                                      </div>
-                                  </form>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+    <section class="login-part">
+        <div class="form-data login">
+            <div class="container-md">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="login-data">
+                                <h4>Login</h4>
+                                <p>Please enter your email/Employee ID and password to login</p>
+                                <div class="form-part">
+                                    <form [formGroup]="loginForm">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Email Address/Employee ID</mat-label>
+                                            <input matInput placeholder="" required>
+                                            <mat-icon matTextPrefix><img class="icon-first" src="../../../../../assets/icons/email.svg" /></mat-icon>                                            
+                                            <mat-error></mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Enter your password</mat-label>
+                                            <input matInput [type]="hide ? 'password' : 'text'" autocomplete="on">
+                                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                                <mat-icon class="eye-icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                            </button>
+                                            <mat-icon matTextPrefix><img class="icon-first" src="../../../../../assets/icons/password.svg" /></mat-icon>
+                                        </mat-form-field>
+                                        <div class="submit-btn">
+                                            <button class="login-submit" mat-raised-button>LOGIN</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
