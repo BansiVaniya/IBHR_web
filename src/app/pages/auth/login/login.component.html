@@ -22,23 +22,25 @@
                                 <p>Please enter your email/Employee ID and password to login</p>
                                 <div class="form-part">
                                     <form [formGroup]="loginForm">
-                                        <mat-form-field appearance="outline">
-                                            <mat-label>Email Address/Employee ID</mat-label>
-                                            <input matInput placeholder="" formControlName="email">
-                                            <mat-icon matTextPrefix><img class="icon-first" src="../../../../../assets/icons/email.svg" /></mat-icon>                                            
+                                        <div class="inputForm">
+                                            <mat-form-field appearance="outline">
+                                                <mat-label>Email Address/Employee ID</mat-label>
+                                                <input matInput placeholder="">
+                                                <mat-icon matTextPrefix><img class="icon-first" src="../../../../../assets/icons/email.svg" /></mat-icon>
+                                            </mat-form-field>
                                             <p *ngIf="isLoginFormSubmitted && loginForm.controls['email'].errors?.['pattern']">Please enter a valid email address </p>
-                                            <!-- <mat-error>sigjf</mat-error> -->
                                             <p class="error-text" *ngIf="isLoginFormSubmitted && loginForm.controls['email'].errors?.['required']">Please enter email address</p>
-                                          
-                                        </mat-form-field>
-                                        <mat-form-field appearance="outline">
-                                            <mat-label>Enter your password</mat-label>
-                                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-                                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                                              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                                            </button>
-<mat-icon matTextPrefix><img class="icon-first" src="../../../../../assets/icons/password.svg" /></mat-icon>
-                                         </mat-form-field>
+                                        </div>
+                                        <div class="inputForm">
+                                            <mat-form-field appearance="outline">
+                                                <mat-label>Enter your password</mat-label>
+                                                <input matInput [type]="hide ? 'password' : 'text'">
+                                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                                </button>
+                                                <mat-icon matTextPrefix><img class="icon-first" src="../../../../../assets/icons/password.svg" /></mat-icon>
+                                            </mat-form-field>
+                                        </div>
                                         <div class="submit-btn">
                                             <button type="button" class="login-submit" mat-raised-button (click)="login()">LOGIN</button>
                                         </div>

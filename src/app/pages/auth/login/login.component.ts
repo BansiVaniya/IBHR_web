@@ -3,7 +3,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EMAIL_PATTERN } from '../../../helpers/emailValidation';
 import { ApiService } from '../../../services/api.service';
 import { SpinnerService } from '../../../services/spinner.service';
-import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-login',
