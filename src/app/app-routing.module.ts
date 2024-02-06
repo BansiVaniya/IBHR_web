@@ -7,14 +7,14 @@ import { AuthGuard } from './guard/auth.guard';
 const routes: Routes = [
   // {path: '', component: LoginComponent},
   {
-    path: 'login',
+    path: '',
     loadChildren: () =>import("./pages/auth/login/login.module").then((m) => m.LoginModule),
   },
   {
     path:'forgot-password',
     loadChildren: () =>import("./pages/auth/forgot-password/forgot-password.module").then((m) => m.ForgotPasswordModule),
   },
-  {path: 'app-forgot-password', component: ForgotPasswordComponent}
+  // {path: 'app-forgot-password', component: ForgotPasswordComponent}
 ];
 
 @NgModule({
