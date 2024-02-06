@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, map, retry, tap, throwError } from 'rxjs';
 import { SpinnerService } from './spinner.service';
 import { AuthenticationService } from './authentication.service';
-import {configuration} from '../../configuration';
+import {configuration} from '../configuration';
 
 @Injectable({
   providedIn: 'root'
